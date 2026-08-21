@@ -1,0 +1,1803 @@
+.workspace {
+
+    min-height:100vh;
+
+    padding:160px 80px 80px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.workspace::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+        circle at 20% 20%,
+
+        rgba(139,92,246,.18),
+
+        transparent 35%
+
+    ),
+
+    radial-gradient(
+
+        circle at 80% 40%,
+
+        rgba(34,211,238,.15),
+
+        transparent 35%
+
+    );
+
+    z-index:-1;
+
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.workspace-header {
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+
+.workspace-badge {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    color:#cbd5e1;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    margin-bottom:30px;
+
+}
+
+
+.workspace-header h1 {
+
+    font-size:
+
+    clamp(55px,7vw,90px);
+
+    font-weight:900;
+
+    letter-spacing:-4px;
+
+    color:#f8fafc;
+
+}
+
+
+.workspace-header h1 span {
+
+    display:block;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #22d3ee,
+
+        #8b5cf6,
+
+        #ec4899
+
+    );
+
+    background-size:200%;
+
+    animation:
+
+    gradientMove 6s ease infinite;
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    color:transparent;
+
+}
+
+
+.workspace-header p {
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    color:#94a3b8;
+
+}
+
+
+/* ==========================
+   GRID
+========================== */
+
+.workspace-grid {
+
+    margin-top:80px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+    gap:35px;
+
+    max-width:1100px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+/* ==========================
+   CARDS
+========================== */
+
+.workspace-card {
+
+    position:relative;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.10),
+
+        rgba(255,255,255,.03)
+
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+
+    0 25px 80px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+
+.workspace-card:hover {
+
+    transform:
+
+    translateY(-8px);
+
+    border-color:
+
+    rgba(34,211,238,.45);
+
+    box-shadow:
+
+    0 30px 90px rgba(0,0,0,.45),
+
+    0 0 40px rgba(34,211,238,.18);
+
+}
+
+
+/* ==========================
+   ICON
+========================== */
+
+.card-icon {
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(34,211,238,.2),
+
+        rgba(139,92,246,.25)
+
+    );
+
+    color:#22d3ee;
+
+    box-shadow:
+
+    inset 0 0 25px rgba(255,255,255,.08);
+
+}
+
+
+.workspace-card h2 {
+
+    font-size:30px;
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+
+.workspace-card p {
+
+    color:#94a3b8;
+
+    line-height:1.7;
+
+    font-size:16px;
+
+}
+
+
+/* ==========================
+   CARD ACTION
+========================== */
+
+.card-action {
+
+    margin-top:30px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#22d3ee;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================
+   BUTTON
+========================== */
+
+.upload-btn {
+
+    margin-top:30px;
+
+    width:100%;
+
+    min-height:170px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    border-radius:24px;
+
+    cursor:pointer;
+
+    border:2px dashed rgba(255,255,255,.12);
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.05),
+
+        rgba(255,255,255,.02)
+
+    );
+
+    transition:.3s ease;
+
+}
+
+
+.upload-btn:hover {
+
+    border-color:#22d3ee;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(34,211,238,.08),
+
+        rgba(139,92,246,.05)
+
+    );
+
+    box-shadow:
+
+    0 0 40px rgba(34,211,238,.12);
+
+}
+
+
+.upload-btn svg {
+
+    width:40px;
+
+    height:40px;
+
+    color:#22d3ee;
+
+}
+
+
+.upload-btn span {
+
+    color:#94a3b8;
+
+    font-size:15px;
+
+}
+
+
+/* ==========================
+   CHAT AREA
+========================== */
+
+.chat-box {
+
+    margin-top:30px;
+
+    height:120px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    color:#64748b;
+
+    background:
+
+    rgba(0,0,0,.25);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+/* ==========================
+   GRADIENT ANIMATION
+========================== */
+
+@keyframes gradientMove {
+
+    0% {
+
+        background-position:0%;
+
+    }
+
+    50% {
+
+        background-position:100%;
+
+    }
+
+    100% {
+
+        background-position:0%;
+
+    }
+
+}
+
+
+/* ==========================
+   FULL PAGE WORKSPACE
+========================== */
+
+.workspace-full {
+
+    min-height:100vh;
+
+    padding:130px 80px 80px;
+
+}
+
+
+/* ==========================
+   BACK BUTTON
+========================== */
+
+.workspace-back-btn {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:11px 20px;
+
+    border-radius:999px;
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    color:#cbd5e1;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.workspace-back-btn:hover {
+
+    background:
+
+    rgba(255,255,255,.12);
+
+    color:white;
+
+    transform:translateX(-4px);
+
+}
+
+
+/* ==========================
+   FULL PAGE HEADER
+========================== */
+
+.workspace-full-header {
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:50px auto 0;
+
+}
+
+
+.workspace-full-header h1 {
+
+    font-size:
+
+    clamp(50px,7vw,82px);
+
+    font-weight:900;
+
+    letter-spacing:-4px;
+
+    color:#f8fafc;
+
+}
+
+
+.workspace-full-header h1 span {
+
+    display:block;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #22d3ee,
+
+        #8b5cf6,
+
+        #ec4899
+
+    );
+
+    background-size:200%;
+
+    animation:
+
+    gradientMove 6s ease infinite;
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    color:transparent;
+
+}
+
+
+.workspace-full-header p {
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    color:#94a3b8;
+
+}
+
+
+/* ==========================
+   FULL PAGE CONTENT
+========================== */
+
+.workspace-full-content {
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:60px auto 0;
+
+}
+
+
+/* ==========================
+   ASSISTANT FULL PAGE
+========================== */
+
+.assistant-full-content {
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:50px auto 0;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.08),
+
+        rgba(255,255,255,.025)
+
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+
+    0 25px 80px rgba(0,0,0,.35);
+
+}
+
+
+/* ==========================
+   EXPANDED CONTENT
+========================== */
+
+.expanded-content {
+
+    margin-top:35px;
+
+    animation:
+
+    fadeIn .4s ease;
+
+}
+
+
+/* ==========================
+   OLD EXPANDED SUPPORT
+========================== */
+
+.workspace-grid.expanded {
+
+    grid-template-columns:1fr;
+
+}
+
+
+.active-card {
+
+    min-height:500px;
+
+    cursor:default;
+
+}
+
+
+.active-card h2 {
+
+    font-size:36px;
+
+}
+
+
+.document-area {
+
+    margin-top:30px;
+
+    height:200px;
+
+    border-radius:20px;
+
+    background:
+
+    rgba(0,0,0,.25);
+
+    border:
+
+    1px dashed rgba(255,255,255,.15);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#64748b;
+
+}
+
+
+/* ==========================
+   CLOSE BUTTON
+========================== */
+
+.close-btn {
+
+    position:absolute;
+
+    right:25px;
+
+    top:25px;
+
+    border:none;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    color:white;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+}
+
+
+.close-btn:hover {
+
+    background:
+
+    rgba(255,255,255,.18);
+
+}
+
+
+/* ==========================
+   FADE ANIMATION
+========================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   DOCUMENT LIST
+========================== */
+
+.documents-list {
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+/* ==========================
+   DOCUMENT CARD
+========================== */
+
+.document-card {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    transition:.25s ease;
+
+}
+
+
+.document-card:hover {
+
+    transform:translateY(-3px);
+
+    border-color:
+
+    rgba(34,211,238,.35);
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+.document-card svg {
+
+    color:#22d3ee;
+
+}
+
+
+.document-info {
+
+    flex:1;
+
+}
+
+
+.document-info h4 {
+
+    color:white;
+
+    margin-bottom:5px;
+
+}
+
+
+.document-info span {
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+
+/* ==========================
+   DELETE BUTTON
+========================== */
+
+.delete-btn {
+
+    border:none;
+
+    background:
+
+    rgba(236,72,153,.15);
+
+    color:#ec4899;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+.delete-btn:hover {
+
+    background:
+
+    rgba(236,72,153,.3);
+
+    transform:scale(1.05);
+
+}
+.document-actions {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+/* ==========================
+   DOCUMENT STATUS
+========================== */
+
+.document-status {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:13px;
+
+    color:#22d3ee;
+
+}
+
+
+.document-status svg {
+
+    animation:
+
+    pulseStatus 1.5s infinite;
+
+}
+
+
+@keyframes pulseStatus {
+
+    0% {
+
+        opacity:.4;
+
+    }
+
+    50% {
+
+        opacity:1;
+
+    }
+
+    100% {
+
+        opacity:.4;
+
+    }
+
+}
+
+
+/* ==========================
+   EMPTY DOCUMENT STATE
+========================== */
+
+.empty-documents {
+
+    margin-top:30px;
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    border:
+
+    1px dashed rgba(255,255,255,.15);
+
+    background:
+
+    rgba(0,0,0,.18);
+
+    color:#64748b;
+
+}
+
+
+.empty-documents svg {
+
+    color:#22d3ee;
+
+    margin-bottom:15px;
+
+}
+
+
+.empty-documents h3 {
+
+    color:white;
+
+    margin-bottom:8px;
+
+}
+
+
+.empty-documents p {
+
+    color:#94a3b8;
+
+}
+
+
+/* ==========================
+   BACKEND PROCESSING
+========================== */
+
+.processing-card {
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+.processing-title {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+
+.processing-title h4 {
+
+    color:#f8fafc;
+
+    font-size:16px;
+
+}
+
+
+.processing-percent {
+
+    color:#22d3ee;
+
+    font-weight:700;
+
+}
+
+
+.progress-track {
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+}
+
+
+.progress-bar {
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #22d3ee,
+
+        #60a5fa,
+
+        #8b5cf6
+
+    );
+
+    transition:
+
+    width .4s ease;
+
+}
+
+
+.processing-steps {
+
+    margin-top:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+.processing-step {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+}
+
+
+.processing-step.completed {
+
+    color:#4ade80;
+
+}
+
+
+.processing-step.active {
+
+    color:#22d3ee;
+
+}
+
+
+.processing-step svg {
+
+    flex-shrink:0;
+
+}
+
+
+/* ==========================
+   ERROR MESSAGE
+========================== */
+
+.workspace-error {
+
+    margin-top:20px;
+
+    padding:14px 18px;
+
+    border-radius:15px;
+
+    background:
+
+    rgba(239,68,68,.1);
+
+    border:
+
+    1px solid rgba(239,68,68,.2);
+
+    color:#f87171;
+
+}
+
+
+/* ==========================
+   CHAT CONTAINER
+========================== */
+
+.chat-container {
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:600px;
+
+}
+
+
+/* ==========================
+   CHAT MESSAGES
+========================== */
+
+.chat-messages {
+
+    flex:1;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    padding:20px;
+
+}
+
+
+/* ==========================
+   MESSAGE
+========================== */
+
+.message {
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    max-width:75%;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+
+/* ==========================
+   AI MESSAGE
+========================== */
+
+.ai-message {
+
+    background:
+
+    rgba(34,211,238,.12);
+
+    border:
+
+    1px solid rgba(34,211,238,.25);
+
+    color:#e2e8f0;
+
+}
+
+
+/* ==========================
+   USER MESSAGE
+========================== */
+
+.user-message {
+
+    margin-left:auto;
+
+    background:
+
+    rgba(139,92,246,.2);
+
+    border:
+
+    1px solid rgba(139,92,246,.3);
+
+    color:white;
+
+}
+
+
+/* ==========================
+   CHAT INPUT
+========================== */
+
+.chat-input {
+
+    display:flex;
+
+    gap:12px;
+
+    padding-top:20px;
+
+}
+
+
+.chat-input input {
+
+    flex:1;
+
+    padding:15px 20px;
+
+    border-radius:999px;
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    color:white;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+
+.chat-input input::placeholder {
+
+    color:#64748b;
+
+}
+
+
+.chat-input input:focus {
+
+    border-color:
+
+    rgba(34,211,238,.5);
+
+    box-shadow:
+
+    0 0 20px rgba(34,211,238,.08);
+
+}
+
+
+.chat-input button {
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #22d3ee,
+
+        #8b5cf6
+
+    );
+
+    transition:.25s;
+
+}
+
+
+.chat-input button:hover {
+
+    transform:scale(1.05);
+
+    box-shadow:
+
+    0 10px 30px rgba(139,92,246,.35);
+
+}
+
+
+.chat-input button:disabled {
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+
+/* ==========================
+REPORT BUTTON
+========================== */
+
+.report-btn {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    height:38px;
+
+    padding:0 13px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(34,211,238,.18),
+        rgba(139,92,246,.22)
+    );
+
+    border:
+
+    1px solid rgba(34,211,238,.25);
+
+    color:#22d3ee;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+    transition:.3s ease;
+
+    backdrop-filter:blur(12px);
+
+}
+
+
+.report-btn:hover {
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(34,211,238,.35),
+        rgba(139,92,246,.35)
+    );
+
+    border-color:#22d3ee;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+    0 10px 25px rgba(34,211,238,.18);
+
+}
+
+
+.report-btn svg {
+
+    width:16px;
+
+    height:16px;
+
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px) {
+
+    .workspace {
+
+        padding:130px 25px 60px;
+
+    }
+
+
+    .workspace-full {
+
+        padding:120px 25px 60px;
+
+    }
+
+
+    .workspace-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .workspace-header h1,
+    .workspace-full-header h1 {
+
+        letter-spacing:-2px;
+
+    }
+
+
+    .workspace-card {
+
+        padding:30px;
+
+    }
+
+
+    .assistant-full-content {
+
+        padding:20px;
+
+    }
+
+
+    .chat-container {
+
+        height:550px;
+
+    }
+
+
+    .message {
+
+        max-width:90%;
+
+    }
+
+
+    .document-card {
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .document-actions {
+
+        width:100%;
+
+        justify-content:flex-end;
+
+        margin-top:10px;
+
+    }
+
+}
+
+
+/* ==========================
+   SMALL SCREENS
+========================== */
+
+@media(max-width:600px) {
+
+    .workspace {
+
+        padding:110px 18px 50px;
+
+    }
+
+
+    .workspace-full {
+
+        min-height:100vh;
+
+        box-sizing:border-box;
+
+        padding:110px 20px 30px;
+
+        position:relative;
+
+        overflow:hidden;
+
+    }
+
+
+    .workspace-card {
+
+        padding:25px;
+
+        border-radius:24px;
+
+    }
+
+
+    .workspace-card h2 {
+
+        font-size:25px;
+
+    }
+
+
+    .workspace-header p,
+    .workspace-full-header p {
+
+        font-size:16px;
+
+    }
+
+
+    .workspace-full-header {
+
+        margin-top:35px;
+
+    }
+
+
+    .workspace-full-header h1 {
+
+        font-size:42px;
+
+        letter-spacing:-2px;
+
+    }
+
+
+    .assistant-full-content {
+
+        margin-top:30px;
+
+        padding:12px;
+
+        border-radius:22px;
+
+    }
+
+
+    .chat-container {
+
+        height:65vh;
+
+    }
+
+
+    .chat-messages {
+
+        padding:10px;
+
+    }
+
+
+    .message {
+
+        max-width:95%;
+
+        padding:12px 15px;
+
+    }
+
+
+    .document-card {
+
+        padding:15px;
+
+        gap:12px;
+
+    }
+
+
+    .document-info h4 {
+
+        font-size:14px;
+
+        word-break:break-word;
+
+    }
+
+
+    .document-actions {
+
+        width:100%;
+
+        justify-content:flex-end;
+
+        gap:10px;
+
+    }
+
+
+    .report-btn {
+
+        height:34px;
+
+        padding:0 10px;
+
+        font-size:12px;
+
+    }
+
+
+    .delete-btn {
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+
+    .upload-btn {
+
+        min-height:150px;
+
+    }
+
+}
+
+.cancel-upload-btn {
+    margin-top: 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 9px 16px;
+
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    border-radius: 8px;
+
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cancel-upload-btn:hover {
+    background: rgba(239, 68, 68, 0.14);
+    border-color: rgba(239, 68, 68, 0.55);
+
+    transform: translateY(-1px);
+}
+
+.cancel-upload-btn:active {
+    transform: translateY(0);
+}
+
+.cancel-upload-btn svg {
+    width: 15px;
+    height: 15px;
+}

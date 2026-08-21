@@ -1,0 +1,26 @@
+{
+    "title": "",
+    "authors": [],
+    "research_problem": "",
+    "main_contribution": "",
+    "methodology": [
+        "Declare and initialize variables.",
+        "Open input file; if input file does not exist, exit.",
+        "Open output file; output numbers in appropriate formats.",
+        "Read accountNumber and beginningBalance from input file.",
+        "Set accountBalance to beginningBalance.",
+        "Read transactionCode and transactionAmount in a loop controlled by EOF.",
+        "If transactionCode is 'D' or 'd', add transactionAmount to accountBalance and increment numberOfDeposits.",
+        "If transactionCode is 'I' or 'i', add transactionAmount to accountBalance and add transactionAmount to interestPaid.",
+        "If transactionCode is 'W' or 'w', subtract transactionAmount from accountBalance and increment numberOfWithdrawals.",
+        "If accountBalance < MINIMUM_BALANCE and service charge has not been applied, subtract SERVICE_CHARGE from accountBalance and set isServiceCharged to true.",
+        "If transactionCode is other than 'D', 'd', 'I', 'i', 'W', or 'w', output an error message.",
+        "Output the results."
+    ],
+    "datasets": [],
+    "models": [],
+    "evaluation_metrics": [],
+    "results": "",
+    "limitations": [],
+    "future_work": []
+}

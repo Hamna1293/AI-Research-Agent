@@ -1,0 +1,564 @@
+.ai-background {
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    overflow:hidden;
+
+
+    z-index:0;
+
+
+    pointer-events:none;
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at 50% 30%,
+
+        rgba(56,189,248,.08),
+
+        transparent 45%
+
+    );
+
+}
+
+
+
+
+
+
+/* ======================
+   MOVING AI ATMOSPHERE
+====================== */
+
+
+.ai-gradient {
+
+
+    position:absolute;
+
+
+    width:800px;
+
+
+    height:800px;
+
+
+    border-radius:50%;
+
+
+    filter:blur(120px);
+
+
+    opacity:.35;
+
+
+    animation:
+
+    gradientFloat 15s infinite alternate ease-in-out;
+
+}
+
+
+
+
+.gradient-one {
+
+
+    background:
+
+    rgba(139,92,246,.35);
+
+
+    top:-300px;
+
+
+    left:-200px;
+
+}
+
+
+
+
+.gradient-two {
+
+
+    background:
+
+    rgba(34,211,238,.25);
+
+
+    bottom:-300px;
+
+
+    right:-200px;
+
+
+}
+
+
+
+@keyframes gradientFloat {
+
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+
+    to{
+
+        transform:translate(120px,80px);
+
+    }
+
+}
+
+
+
+
+
+
+
+/* ======================
+       AI MESH
+====================== */
+
+
+.mesh {
+
+
+    position:absolute;
+
+
+    inset:0;
+
+}
+
+
+
+
+
+.mesh-node {
+
+
+    position:absolute;
+
+
+    width:9px;
+
+
+    height:9px;
+
+
+    border-radius:50%;
+
+
+    background:#67e8f9;
+
+
+    box-shadow:
+
+
+    0 0 25px #22d3ee;
+
+
+    animation:
+
+    nodePulse 5s infinite ease-in-out;
+
+}
+
+
+
+.n1{
+
+    top:20%;
+
+    left:20%;
+
+}
+
+
+.n2{
+
+    top:35%;
+
+    left:45%;
+
+}
+
+
+.n3{
+
+    top:25%;
+
+    right:20%;
+
+}
+
+
+.n4{
+
+    bottom:30%;
+
+    left:30%;
+
+}
+
+
+.n5{
+
+    bottom:20%;
+
+    right:35%;
+
+}
+
+
+.n6{
+
+    top:55%;
+
+    right:15%;
+
+}
+
+
+
+
+
+@keyframes nodePulse {
+
+
+    0%,100%{
+
+        opacity:.4;
+
+        transform:scale(1);
+
+    }
+
+
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.5);
+
+    }
+
+}
+
+
+
+
+
+
+
+.mesh-line {
+
+
+    position:absolute;
+
+
+    height:1px;
+
+
+    background:
+
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(34,211,238,.35),
+
+        transparent
+
+    );
+
+
+
+}
+
+
+
+.l1{
+
+    width:350px;
+
+    top:27%;
+
+    left:22%;
+
+    transform:rotate(18deg);
+
+}
+
+
+.l2{
+
+    width:300px;
+
+    top:38%;
+
+    right:18%;
+
+    transform:rotate(-25deg);
+
+}
+
+
+.l3{
+
+    width:400px;
+
+    bottom:25%;
+
+    left:25%;
+
+    transform:rotate(-15deg);
+
+}
+
+
+.l4{
+
+    width:250px;
+
+    top:55%;
+
+    left:45%;
+
+    transform:rotate(40deg);
+
+}
+
+
+
+
+
+
+/* ======================
+   PARTICLES
+====================== */
+
+
+.ai-particle {
+
+
+    position:absolute;
+
+
+    width:5px;
+
+
+    height:5px;
+
+
+    border-radius:50%;
+
+
+    background:#c4b5fd;
+
+
+    box-shadow:
+
+
+    0 0 20px #8b5cf6;
+
+
+    animation:
+
+    particleMove 10s infinite ease-in-out;
+
+}
+
+
+
+.p1{
+
+    top:18%;
+
+    left:60%;
+
+}
+
+
+.p2{
+
+    top:70%;
+
+    left:20%;
+
+}
+
+
+.p3{
+
+    top:45%;
+
+    right:25%;
+
+}
+
+
+.p4{
+
+    bottom:15%;
+
+    right:15%;
+
+}
+
+
+.p5{
+
+    top:30%;
+
+    left:75%;
+
+}
+
+
+
+
+
+@keyframes particleMove {
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+        opacity:.3;
+
+    }
+
+
+
+    50%{
+
+        transform:translateY(-60px);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+
+
+/* ======================
+     DATA STREAMS
+====================== */
+
+
+.data-stream {
+
+
+    position:absolute;
+
+
+    width:2px;
+
+
+    height:120px;
+
+
+    background:
+
+
+    linear-gradient(
+
+        transparent,
+
+        #22d3ee,
+
+        transparent
+
+    );
+
+
+    opacity:.5;
+
+
+    animation:
+
+    streamMove 8s infinite linear;
+
+}
+
+
+
+.s1{
+
+    left:30%;
+
+    top:-120px;
+
+}
+
+
+
+.s2{
+
+    left:70%;
+
+    top:-180px;
+
+    animation-delay:3s;
+
+}
+
+
+
+.s3{
+
+    left:50%;
+
+    top:-200px;
+
+    animation-delay:5s;
+
+}
+
+
+
+
+
+@keyframes streamMove {
+
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+
+    to{
+
+        transform:translateY(120vh);
+
+    }
+
+}

@@ -1,0 +1,23 @@
+{
+    "title": "C++ Programming: From Problem Analysis to Program Design, Fourth Edition",
+    "authors": [],
+    "research_problem": "calculate a customer's checking account balance at the end of each month",
+    "main_contribution": "program that reads a transaction file, updates the balance after each transaction, applies a $25 service fee if the balance falls below $1000, and prints an account summary including account number, beginning balance, ending balance, interest paid, total deposited amount, number of deposits, total withdrawn amount, number of withdrawals, and any service charge",
+    "methodology": [
+        "Declare the variables",
+        "Initialize the variables",
+        "Get the account number and beginning balance",
+        "Get transaction code and transaction amount",
+        "Analyze transaction code and update the appropriate variables (add for D/d/I/i, subtract for W/w)",
+        "Repeat steps 4 and 5 for all data",
+        "Print the result"
+    ],
+    "datasets": [
+        "input file containing account number, beginning balance, and subsequent lines with transaction code (W/D/I) and transaction amount"
+    ],
+    "models": [],
+    "evaluation_metrics": [],
+    "results": "",
+    "limitations": [],
+    "future_work": []
+}

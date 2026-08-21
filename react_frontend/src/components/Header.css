@@ -1,0 +1,309 @@
+.header {
+
+
+    position:fixed;
+
+
+    top:20px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    height:75px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    padding:0 30px;
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+
+    rgba(15,23,42,.65);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:
+
+    blur(25px);
+
+
+
+    -webkit-backdrop-filter:
+
+    blur(25px);
+
+
+
+    z-index:100;
+
+
+}
+
+
+
+
+
+.logo {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+    font-size:22px;
+
+
+    font-weight:800;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+.logo-icon {
+
+
+    width:42px;
+
+
+    height:42px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    border-radius:14px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #22d3ee,
+
+        #8b5cf6
+
+    );
+
+
+
+    box-shadow:
+
+
+    0 0 25px rgba(34,211,238,.4);
+
+
+}
+
+
+
+
+
+.nav-links {
+
+
+    display:flex;
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+.nav-links a {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:8px;
+
+
+    color:#94a3b8;
+
+
+    text-decoration:none;
+
+
+    font-weight:600;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.nav-links a:hover {
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+.nav-links a.active {
+
+
+    color:#22d3ee;
+
+
+}
+
+
+
+
+
+.header-btn {
+
+
+    border:none;
+
+
+    padding:13px 25px;
+
+
+    border-radius:30px;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+    font-weight:700;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #22d3ee,
+
+        #8b5cf6
+
+    );
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.header-btn:hover {
+
+
+    transform:translateY(-3px);
+
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(139,92,246,.45);
+
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+
+    .header{
+
+
+        width:95%;
+
+
+        padding:0 15px;
+
+    }
+
+
+
+    .nav-links{
+
+
+        display:none;
+
+    }
+
+
+
+}

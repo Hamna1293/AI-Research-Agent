@@ -1,0 +1,29 @@
+{
+    "title": "C++ Programming: From Problem Analysis to Program Design, Fourth Edition Chapter 5: Control Structures II (Repetition)",
+    "authors": [],
+    "research_problem": "",
+    "main_contribution": "",
+    "methodology": [
+        "Declare and initialize variables",
+        "Open input file",
+        "If input file does not exist, exit",
+        "Open output file",
+        "Output numbers in appropriate formats",
+        "Read accountNumber and beginningBalance",
+        "Set accountBalance to beginningBalance",
+        "Read transactionCode and transactionAmount",
+        "Repeat until end of input file:",
+        "If transactionCode is 'D' or 'd', add transactionAmount to accountBalance and increment numberOfDeposits",
+        "If transactionCode is 'I' or 'i', add transactionAmount to accountBalance and add transactionAmount to interestPaid",
+        "If transactionCode is 'W' or 'w', subtract transactionAmount from accountBalance and increment numberOfWithdrawals",
+        "If accountBalance < MINIMUM_BALANCE and !isServiceCharged, subtract SERVICE_CHARGE from accountBalance and set isServiceCharged to true",
+        "If transactionCode is other than 'D', 'd', 'I', 'i', 'W', or 'w', output an error message",
+        "Output the results"
+    ],
+    "datasets": [],
+    "models": [],
+    "evaluation_metrics": [],
+    "results": "",
+    "limitations": [],
+    "future_work": []
+}

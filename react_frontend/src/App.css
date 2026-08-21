@@ -1,0 +1,461 @@
+@import url(
+'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap'
+);
+
+
+
+:root {
+
+
+    /* Premium dark slate background */
+
+    --bg:
+    #0B1120;
+
+
+    --bg-soft:
+    #111827;
+
+
+    --surface:
+    rgba(255,255,255,0.08);
+
+
+
+    /* Accent colors */
+
+    --purple:
+    #7C3AED;
+
+
+    --violet:
+    #A78BFA;
+
+
+    --cyan:
+    #38BDF8;
+
+
+    --pink:
+    #F472B6;
+
+
+
+    /* Text */
+
+    --white:
+    #F9FAFB;
+
+
+    --muted:
+    #A1A1AA;
+
+
+    --border:
+    rgba(255,255,255,0.12);
+
+}
+
+
+
+
+
+* {
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+
+
+body {
+
+
+    background:
+
+    var(--bg);
+
+
+    color:
+
+    var(--white);
+
+
+    font-family:
+
+    "Inter",
+    sans-serif;
+
+
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   PREMIUM BACKGROUND ATMOSPHERE
+================================ */
+
+
+body::before {
+
+
+    content:"";
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    z-index:-2;
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle at 15% 20%,
+
+        rgba(124,58,237,.18),
+
+        transparent 35%
+
+    ),
+
+
+
+    radial-gradient(
+
+        circle at 85% 25%,
+
+        rgba(56,189,248,.15),
+
+        transparent 35%
+
+    ),
+
+
+
+    radial-gradient(
+
+        circle at 50% 90%,
+
+        rgba(244,114,182,.10),
+
+        transparent 40%
+
+    );
+
+}
+
+
+
+
+
+/* subtle texture layer */
+
+body::after {
+
+
+    content:"";
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    z-index:-1;
+
+
+    background:
+
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.03),
+
+        transparent 30%
+
+    );
+
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+
+
+#root {
+
+
+    min-height:100vh;
+
+}
+
+
+
+
+
+
+
+
+/* ==============================
+   PREMIUM GRADIENT TEXT
+================================ */
+
+
+.gradient-text {
+
+
+    background:
+
+
+    linear-gradient(
+
+        90deg,
+
+        var(--cyan),
+
+        var(--violet),
+
+        var(--pink)
+
+    );
+
+
+    background-size:200%;
+
+
+    -webkit-background-clip:text;
+
+
+    background-clip:text;
+
+
+    -webkit-text-fill-color:transparent;
+
+
+    color:transparent;
+
+
+    animation:
+
+    gradientMove 8s ease infinite;
+
+}
+
+
+
+
+
+
+
+@keyframes gradientMove {
+
+
+    0% {
+
+
+        background-position:
+
+        0%;
+
+    }
+
+
+
+    50% {
+
+
+        background-position:
+
+        100%;
+
+    }
+
+
+
+    100% {
+
+
+        background-position:
+
+        0%;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+/* ==============================
+   GLOBAL GLASS COMPONENT
+================================ */
+
+
+.glass {
+
+
+    background:
+
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.10),
+
+        rgba(255,255,255,.04)
+
+    );
+
+
+
+    border:
+
+
+    1px solid var(--border);
+
+
+
+    backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    -webkit-backdrop-filter:
+
+
+    blur(25px);
+
+
+
+    box-shadow:
+
+
+    0 25px 80px rgba(0,0,0,.35);
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   BUTTON / CARD POLISH
+================================ */
+
+
+button {
+
+
+    font-family:
+
+    inherit;
+
+}
+
+
+
+
+
+::selection {
+
+
+    background:
+
+    rgba(56,189,248,.35);
+
+
+    color:white;
+
+}
+
+
+
+
+
+
+
+
+/* smooth scrollbar */
+
+::-webkit-scrollbar {
+
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+
+    background:
+
+    #0B1120;
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+
+    background:
+
+
+    linear-gradient(
+
+        var(--cyan),
+
+        var(--purple)
+
+    );
+
+
+    border-radius:20px;
+
+}
